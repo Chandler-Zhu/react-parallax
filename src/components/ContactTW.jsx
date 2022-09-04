@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Sit from '../img/contact.svg';
 import kwesforms from 'kwesforms';
 const ContactTW = () => {
   useEffect(() => {
@@ -6,17 +7,15 @@ const ContactTW = () => {
   }, []);
   return (
     <>
-      <section className="bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
+      <section className="bg-white py-20 lg:py-[120px] overflow-hidden relative z-10 mx-24">
         <div className="container">
           <div className="flex flex-wrap lg:justify-between -mx-4">
             <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
               <div className="max-w-[570px] mb-12 lg:mb-0">
-                <span className="block mb-4 text-base text-primary font-semibold">
-                  Contact Us
-                </span>
                 <h2
                   className="
                  text-dark
+                 mt-0
                  mb-6
                  uppercase
                  font-bold
@@ -26,21 +25,26 @@ const ContactTW = () => {
                  xl:text-[40px]
                  "
                 >
-                  GET IN TOUCH WITH US
+                  GET IN TOUCH WITH ME
                 </h2>
-                <p className="text-base text-body-color leading-relaxed mb-9">
+                {/* <p className="text-base text-body-color leading-relaxed mb-9">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eius tempor incididunt ut labore et dolore magna aliqua. Ut
                   enim adiqua minim veniam quis nostrud exercitation ullamco
-                </p>
+                </p> */}
+                <img src={Sit} alt="send message illustration" />
               </div>
             </div>
             <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
               <div className="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
-                <form>
+                <form
+                  className="z-10  kwes-form"
+                  action="https://kwesforms.com/api/foreign/forms/LQSdN5jB6CUKo5jcWCpg"
+                >
                   <div className="mb-6">
                     <input
                       type="text"
+                      name="name"
                       placeholder="Your Name"
                       className="
                        w-full
@@ -51,13 +55,14 @@ const ContactTW = () => {
                        border border-[f0f0f0]
                        outline-none
                        focus-visible:shadow-none
-                       focus:border-primary
+                       focus:border-[#3056d3]
                        "
                     />
                   </div>
                   <div className="mb-6">
                     <input
                       type="email"
+                      name="email"
                       placeholder="Your Email"
                       className="
                        w-full
@@ -68,13 +73,14 @@ const ContactTW = () => {
                        border border-[f0f0f0]
                        outline-none
                        focus-visible:shadow-none
-                       focus:border-primary
+                       focus:border-[#3056d3]
                        "
                     />
                   </div>
                   <div className="mb-6">
                     <input
                       type="text"
+                      name="phone"
                       placeholder="Your Phone"
                       className="
                        w-full
@@ -85,15 +91,17 @@ const ContactTW = () => {
                        border border-[f0f0f0]
                        outline-none
                        focus-visible:shadow-none
-                       focus:border-primary
+                       focus:border-[#3056d3]
                        "
                     />
                   </div>
                   <div className="mb-6">
                     <textarea
                       rows="6"
+                      name="message"
                       placeholder="Your Message"
                       className="
+                      placeholder: font-sans
                        w-full
                        rounded
                        py-3
@@ -103,7 +111,7 @@ const ContactTW = () => {
                        resize-none
                        outline-none
                        focus-visible:shadow-none
-                       focus:border-primary
+                       focus:border-[#3056d3]
                        "
                     ></textarea>
                   </div>
@@ -111,11 +119,12 @@ const ContactTW = () => {
                     <button
                       type="submit"
                       className="
+                      text-md
                        w-full
                        text-white
-                       bg-primary
+                       bg-[#3056d3]
                        rounded
-                       border border-primary
+                       border border-[#3056d3]
                        p-3
                        transition
                        hover:bg-opacity-90
@@ -126,23 +135,7 @@ const ContactTW = () => {
                   </div>
                 </form>
                 <div>
-                  <span className="absolute -top-10 -right-9 z-[-1]">
-                    <svg
-                      width="100"
-                      height="100"
-                      viewBox="0 0 100 100"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z"
-                        fill="#3056D3"
-                      />
-                    </svg>
-                  </span>
-                  <span className="absolute -right-10 top-[90px] z-[-1]">
+                  <span className="absolute -right-10 top-[90px] z-[-2]">
                     <svg
                       width="34"
                       height="134"
